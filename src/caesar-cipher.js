@@ -1,5 +1,9 @@
 class CaesarCipher {
-  shift(string, shiftFactor) {}
+  shift(string, shiftFactor) {
+    let newString = '';
+
+    return newString;
+  }
 }
 
 export default CaesarCipher;
