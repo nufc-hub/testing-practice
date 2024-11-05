@@ -29,7 +29,7 @@ class CaesarCipher {
 
   // Used in the loop of the shift function.
   getAsciiCode(string, index) {
-    let asciiCode = string.charCodeAt(index);
+    const asciiCode = string.charCodeAt(index);
     return asciiCode;
   }
 }
