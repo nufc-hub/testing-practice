@@ -9,13 +9,13 @@ class CaesarCipher {
 
       // Handle uppercase.
       if (asciiCode >= 65 && asciiCode <= 90) {
-        asciiCode = this.upperCaseTextWrap(asciiCode, shiftFactor);
+        asciiCode = this.wrapUpperCase(asciiCode, shiftFactor);
         newString += this.charCodeToString(asciiCode);
       }
 
       // Handle lowercase.
       else if (asciiCode >= 97 && asciiCode <= 122) {
-        asciiCode = this.lowerCaseTextWrap(asciiCode, shiftFactor);
+        asciiCode = this.wrapLowerCase(asciiCode, shiftFactor);
         newString += this.charCodeToString(asciiCode);
       }
 
@@ -35,13 +35,13 @@ class CaesarCipher {
   }
 
   // Uppercase text wrap.
-  upperCaseTextWrap(asciiCode, shiftFactor) {
+  wrapUpperCase(asciiCode, shiftFactor) {
     const newAsciiCode = ((asciiCode - 65 + shiftFactor) % 26) + 65;
     return newAsciiCode;
   }
 
   // Lower case text wrap.
-  lowerCaseTextWrap(asciiCode, shiftFactor) {
+  wrapLowerCase(asciiCode, shiftFactor) {
     const newAsciiCode = ((asciiCode - 97 + shiftFactor) % 26) + 97;
     return newAsciiCode;
   }
