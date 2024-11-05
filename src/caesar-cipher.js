@@ -1,4 +1,5 @@
 class CaesarCipher {
+  // Takes a string and a shift factor and returns it with each character "shifted".
   shift(string, shiftFactor) {
     let newString = '';
 
@@ -33,13 +34,13 @@ class CaesarCipher {
     return asciiCode;
   }
 
-  // Text wrap.
-
+  // Uppercase text wrap.
   upperCaseTextWrap(asciiCode, shiftFactor) {
     const newAsciiCode = ((asciiCode - 65 + shiftFactor) % 26) + 65;
     return newAsciiCode;
   }
 
+  // Lower case text wrap.
   lowerCaseTextWrap(asciiCode, shiftFactor) {
     const newAsciiCode = ((asciiCode - 97 + shiftFactor) % 26) + 97;
     return newAsciiCode;
