@@ -1,7 +1,7 @@
 class CaesarCipher {
   // Takes a string and a shift factor and returns it with each character "shifted".
   shift(string, shiftFactor) {
-    let newString = '';
+    let newString = [];
 
     for (let i = 0; i < string.length; i++) {
       // Get ascii code.
@@ -10,22 +10,21 @@ class CaesarCipher {
       // Handle uppercase.
       if (asciiCode >= 65 && asciiCode <= 90) {
         asciiCode = this.wrapUpperCase(asciiCode, shiftFactor);
-        newString += this.charCodeToString(asciiCode);
       }
 
       // Handle lowercase.
       else if (asciiCode >= 97 && asciiCode <= 122) {
         asciiCode = this.wrapLowerCase(asciiCode, shiftFactor);
-        newString += this.charCodeToString(asciiCode);
       }
 
-      // Handle non letter characters.
-      else {
-        newString += this.charCodeToString(asciiCode);
-      }
+      // None letter characters remain unchanged.
+
+      // Collect the new characters in the newString array.
+      newString.push(this.charCodeToString(asciiCode));
     }
 
-    return newString;
+    // Concatenate the array into one string.
+    return newString.join('');
   }
 
   // Used in the loop of the shift function.
