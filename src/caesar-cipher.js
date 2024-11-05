@@ -3,7 +3,8 @@ class CaesarCipher {
     let newString = '';
 
     for (let i = 0; i < string.length; i++) {
-      let asciiCode = string.charCodeAt(i);
+      // Get ascii code.
+      let asciiCode = this.getAsciiCode(string, i);
 
       // Handle uppercase
       if (asciiCode >= 65 && asciiCode <= 90) {
@@ -24,6 +25,12 @@ class CaesarCipher {
     }
 
     return newString;
+  }
+
+  // Used in the loop of the shift function.
+  getAsciiCode(string, index) {
+    let asciiCode = string.charCodeAt(index);
+    return asciiCode;
   }
 }
 
