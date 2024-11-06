@@ -1,6 +1,10 @@
-// Test average.
-test('something function return average property with value of 4', () => {
-  const obj = some.function();
+import ArrayAnalyzer from './analyzeArray';
 
-  expect(obj.toHaveProperty('average', 4));
+const arrayAnalyzer = new ArrayAnalyzer();
+
+// Test average.
+test('return average with value of 4', () => {
+  const obj = arrayAnalyzer.createObject([1, 8, 3, 4, 2, 6]);
+
+  expect(obj).toHaveProperty('average', 4);
 });
