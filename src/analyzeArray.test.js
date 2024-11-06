@@ -29,3 +29,17 @@ test('return the lowest value in the array with a value of 2', () => {
 
   expect(obj).toHaveProperty('min', 2);
 });
+
+// Test max.
+
+test('return the highest value in the array with a value of 8', () => {
+  const obj = arrayAnalyzer.createObject([1, 8, 3, 4, 2, 6]);
+
+  expect(obj).toHaveProperty('max', 8);
+});
+
+test('return the highest value in the array with a value of 12', () => {
+  const obj = arrayAnalyzer.createObject([12, 8, 3, 4, 2, 6]);
+
+  expect(obj).toHaveProperty('max', 12);
+});
