@@ -3,7 +3,7 @@ class ArrayAnalyzer {
   createObject(array) {
     const obj = {
       average: this.getAverage(array),
-      min: '',
+      min: this.getMin(array),
       max: '',
       length: '',
     };
@@ -21,6 +21,17 @@ class ArrayAnalyzer {
     const average = sum / array.length;
 
     return average;
+  }
+
+  // Returns the min value in the array.
+  getMin(array) {
+    // Sort the array.
+    const sortedArray = array.sort((a, b) => a - b);
+
+    // Get the min value in the array.
+    const minValue = sortedArray[0];
+
+    return minValue;
   }
 }
 
