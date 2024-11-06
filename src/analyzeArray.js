@@ -5,7 +5,7 @@ class ArrayAnalyzer {
       average: this.getAverage(array), // The average value in the array.
       min: this.getMin(array), // The min value in the array.
       max: this.getMax(array), // The max value in the array.
-      length: '',
+      length: this.getLength(array), // The length of the array.
     };
 
     return obj;
@@ -43,6 +43,11 @@ class ArrayAnalyzer {
     const maxValue = sortedArray[0];
 
     return maxValue;
+  }
+
+  // Returns the length of the array.
+  getLength(array) {
+    return array.length;
   }
 }
 
