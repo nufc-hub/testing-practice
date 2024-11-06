@@ -16,7 +16,7 @@ test('return average with value of 5', () => {
   expect(obj).toHaveProperty('average', 5);
 });
 
-// Test min
+// Test min.
 
 test('return the lowest value in the array with a value of 1', () => {
   const obj = arrayAnalyzer.createObject([1, 8, 3, 4, 2, 6]);
@@ -44,7 +44,7 @@ test('return the highest value in the array with a value of 12', () => {
   expect(obj).toHaveProperty('max', 12);
 });
 
-// Test length
+// Test length.
 
 test('returns the length of the array with a value of 6', () => {
   const obj = arrayAnalyzer.createObject([1, 8, 3, 4, 2, 6]);
