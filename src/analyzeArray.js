@@ -25,24 +25,14 @@ class ArrayAnalyzer {
 
   // Returns the min value in the array.
   getMin(array) {
-    // Sort the array - lowest to highest.
-    const sortedArray = array.sort((a, b) => a - b);
-
     // Get the min value in the array.
-    const minValue = sortedArray[0];
-
-    return minValue;
+    return Math.min(...array);
   }
 
   // Returns the max value in the array.
   getMax(array) {
-    // Sort the array - highest to lowest.
-    const sortedArray = array.sort((a, b) => b - a);
-
     // Get the max value in the array.
-    const maxValue = sortedArray[0];
-
-    return maxValue;
+    return Math.max(...array);
   }
 
   // Returns the length of the array.
