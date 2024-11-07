@@ -1,4 +1,4 @@
-import CaesarCipher from './caesar-cipher';
+import CaesarCipher from './caesarCipher';
 
 const caesarCipher = new CaesarCipher();
 
