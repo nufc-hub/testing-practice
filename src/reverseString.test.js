@@ -1,4 +1,4 @@
-import reverseString from './reverse-string';
+import reverseString from './reverseString';
 
 // Check if a string is reversed.
 
